@@ -1,6 +1,8 @@
 #!/usr/bin/env python
-
-# listens for a broadcast packet, then takes a picture, dumps it out as a timestamp
+'''
+listens for a broadcast packet with the string "photo" in it.
+then takes a picture, names it with the hostname and timestamp
+'''
 import time
 import socket
 import picamera
