@@ -22,6 +22,6 @@ with picamera.PiCamera() as camera:
             print "taking a photo"
             serial = data.split("-")
             serial = serial[1]
-            camera.capture("/mnt/bird/run1/{0}_{1}.jpg".format(socket.gethostname(),serial))
+            camera.capture("{0}_{1}.jpg".format(socket.gethostname(),serial))
         #sys.exit(1)
 
