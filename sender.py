@@ -12,7 +12,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.bind(('', 0))
 s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
-# Change this number to stop accidentally writing 
+# Change this number to stop accidentally overwriting 
 # previous images
 count = 200
 while 1:
