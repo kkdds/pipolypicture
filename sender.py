@@ -12,6 +12,8 @@ s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.bind(('', 0))
 s.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
+# Change this number to stop accidentally writing 
+# previous images
 count = 200
 while 1:
     data = "photo-{0}".format(count)

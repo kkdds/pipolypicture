@@ -20,10 +20,11 @@ with picamera.PiCamera() as camera:
         data, addr = udp.recvfrom(1024)
         print "Got me a packet"
         print data
+        # This could be any word or string, allowing you to trigger
+        # different things using the same system
         if "photo" in data:
             print "taking a photo"
             serial = data.split("-")
             serial = serial[1]
             camera.capture("{0}_{1}.jpg".format(socket.gethostname(),serial))
-        #sys.exit(1)
 
